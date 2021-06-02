@@ -1,0 +1,38 @@
+J'ai lu les instructions "cat instructions"
+Rentrer dans mystery "cd mystery"
+Chercher les indices de l'officier "grep CLUE crimescene"
+
+CLUE: Found a wallet believed to belong to the killer: no ID, just loose change, and membership cards for AAA, Delta SkyMiles, the local library, and the Museum of Bash History. The cards are totally untraceable and have no name, for some reason. 
+
+Je vais dans membreships "cd membreships"
+Je prend les 4 fichier et je les regroupe pour voir quel peersonne fais partie des 4 groupes 
+"grep -wFf AAA Museum_of_Bash_History > taratata"
+"grep -wFf Delta_SkyMiles Terminal_City_Library > pitata"
+"grep -wFt taratata pitata > choco"
+
+Puis je le lie au fichier people pour avoir les adresses et le sexe "grep -wFf membre people > babe"
+Ensuite je supprime les femmes "nano babe"
+
+Je continue sur le 3eme indice: CLUE: Questioned the barista at the local coffee shop. He said a woman left right before they heard the shots. The name on her latte was Annabel, she had blond spiky hair and a New Zealand accent.
+
+Je cherche Annabel dans people"cat people | grep Annabel"
+je prend les adresses des femmes 
+Annabel Sun	F	26	Hart Place, line 40
+Annabel Church	F	38	Buckingham Place, line 179
+
+Puis je cherche dans street pour trouver 
+"cat Hart_Place | grep INTER": interview-47246024
+"cat Buckingham_Place | grep INTER": interview-699607
+
+Je vais dans interview je consulte les 2 que j'ai trouver
+"cat interview-47246024": RAS
+"cat interview-699607": Describes it as a blue Honda, with a license plate that starts with "L337" and ends with "9"
+
+Je cherche dans les véhicules avec la plaques "cat vehicles | grep -a6 L337 > carbabe"
+Puis je trie par marque "cat carbabe | grep -a5 Honda > 1carbabe"
+
+Je compare visuelement les relevés vehicules et les cartes de membres je trouve Jeremy Bowers
+
+
+
+
