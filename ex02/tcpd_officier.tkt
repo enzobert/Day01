@@ -1,0 +1,4 @@
+sed -n '/Officer/p' tcpd_department.csv
+
+awk -F, '(/Officer/)' tcpd_department.csv
+

@@ -1,0 +1,1 @@
+sed -i '10,11d' deposition_Joe_Rugiani.txt
